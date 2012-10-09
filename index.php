@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); ?>
 
 <!-- Inizio Content -->
@@ -9,3 +10,5 @@
 <!-- Fine Content -->
 
 <?php get_footer(); ?>
+=======
+>>>>>>> parent of b3842ee... Sviluppiamo la Testata del nostro Tema
