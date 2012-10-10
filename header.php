@@ -13,8 +13,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url'); ?>">
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.min.js"></script>
+	<link rel="stylesheet/less" href="<?php bloginfo( 'stylesheet_directory'); ?>/less/style.less">
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/less.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.js"></script>
 </head>
  
 <body>
