@@ -1,6 +1,6 @@
 <!-- Inizio Footer -->
 		<footer>
-		 
+		 	<p>Footer</p>
 		</footer>
 		
 	</div> <!-- /#container -->

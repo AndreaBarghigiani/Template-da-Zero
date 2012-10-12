@@ -3,7 +3,7 @@
 <!-- Inizio Content -->
 		<div id="main" role="main">
 		 
-			 
+			 <p>Colonna Principale</p>
 		 	
 		</div>
 <!-- Fine Content -->

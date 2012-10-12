@@ -27,3 +27,8 @@
 	}
 	
 	add_action( 'after_setup_theme', 'localizzo_tema' );
+	
+	// Creo il mio primo menu
+	if( function_exists( 'register_nav_menu' ) ){
+		register_nav_menu( 'principale', 'Header Menu' );
+	}
