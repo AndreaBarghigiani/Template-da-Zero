@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	 
-	<title><?php wp_title(''); ?></title>
+	<title><?php wp_title('|', true, 'right'); ?></title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -31,6 +31,6 @@
 		</header>
 		
 		<nav>
-		    <?php wp_nav_menu( 'principale' ); ?>
+		    <?php wp_nav_menu(  ); ?>
 		</nav>
 		<!-- Fine Header -->
