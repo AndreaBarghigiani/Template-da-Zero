@@ -44,6 +44,42 @@
 	            'after_title' => '</h4>'
 	       )
 	   );
+		
+		//Messaggio Benvenuto
+		register_sidebar(
+		  array(
+		    'name' => 'Messaggio Benvenuto',
+		    'id' => 'benvenuto',
+		    'before_widget' => '<div id="benvenuto">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h3>',
+		    'after_title' => '</h3>'
+		  )
+		);
+		 
+		//Sidebar Singola Pagina
+		register_sidebar(
+		  array(
+		    'name' => 'Sidebar Singola',
+		       'id' => 'sidebar-singola',
+		       'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		       'after_widget' => '</div>',
+		       'before_title' => '<h4>',
+		       'after_title' => '</h4>'
+		  )
+		);
+		 
+		//Sezione Footer
+		register_sidebar(
+		  array(
+		    'name' => 'Footer',
+		       'id' => 'area-footer',
+		       'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		       'after_widget' => '</div>',
+		       'before_title' => '<h4>',
+		       'after_title' => '</h4>'
+		  )
+		);
 	}
 	 
 	add_action( 'widgets_init', 'zero_widget_area');
