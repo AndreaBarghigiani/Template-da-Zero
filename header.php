@@ -18,15 +18,24 @@
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.js"></script>
 </head>
  
-<body>
+<body <?php body_class(); ?>>
  	<?php $opzioni = get_option( 'opt_impostazioni_tema' ); ?>
 	<div id="container">
 	 
 		<header>
 		 	<img id="logo" src="<?php echo $opzioni['logo']; ?>" title="<?php bloginfo( 'name' ); ?> Logo" />
 		 	<hgroup>
-			    <h1 id="titolo-sito"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			    <h2 id="descrizione-sito"><?php bloginfo( 'description' ); ?></h2>
+		 		<?php if( !is_single() ) : ?>
+		 			
+				  <h1 id="titolo-sito"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				  <h2 id="descrizione-sito"><?php bloginfo( 'description' ); ?></h2>
+				  
+				<?php else : ?>
+					
+				  <h2 id="titolo-sito"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+				  <h3 id="descrizione-sito"><?php bloginfo( 'description' ); ?></h3>
+				  
+				<?php endif; ?>	
 			</hgroup>
 		</header>
 		
@@ -34,3 +43,7 @@
 		    <?php wp_nav_menu(  ); ?>
 		</nav>
 		<!-- Fine Header -->
+		
+
+
+
