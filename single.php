@@ -3,11 +3,12 @@
 <!-- Inizio Content -->
     <div id="main" role="main">
 
-      <p>Inserire Ciclo</p>
-
+      <?php get_template_part( 'content', 'single' ); ?>
+   		   
     </div>
 <!-- Fine Content -->
-
+	
+	
 <?php get_sidebar( 'singola' ); ?>
  
 <?php get_footer(); ?>
