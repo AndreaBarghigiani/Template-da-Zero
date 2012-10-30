@@ -85,44 +85,7 @@
 	add_action( 'widgets_init', 'zero_widget_area');
 	
 	
-	/* Mostra Commenti */
-	function tz_comment_list( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
-		switch ( $comment->comment_type ) :
-			case 'pingback' :
-			case 'trackback' :
-		?>
-			<li>Caso Pingback o Trackback</li>
-		<?php
-			break;
-			default :
-		?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<article class="comment">
-				<div class="comment-info">
-					<p class="comment-auth">
-						<?php comment_author_link(); ?>
-					</p>
-					<time class="comment-time" pubdate datetime="<?php get_comment_date( 'c' ); ?>">
-						<?php comment_time('j F, Y'); ?>
-					</time>
-		
-					<?php if ( $comment->comment_approved == '0' ) : ?>
-						<em class="comment-awaiting-moderation"><?php _e( 'Il tuo commento sta aspettando la moderazione.', 'am_template' ); ?></em>
-							<br />
-					<?php endif; ?>
-		
-				</div><!-- .comment-info -->
-		
-				<p><?php comment_text(); ?></p>
-		
-			</article><!-- .comment -->
-		
-		</li>
-		<?php
-			break;
-			endswitch;
-	}
+	
 	
 	
 	
