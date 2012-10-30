@@ -5,6 +5,7 @@
 
       <?php get_template_part( 'content', 'single' ); ?>
    		   
+   		<?php comments_template(); ?>
     </div>
 <!-- Fine Content -->
 	
