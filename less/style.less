@@ -26,6 +26,7 @@ footer{
 	.riga();
 }
 
+// Sistemo il layout della pagina singola
 .single #container{
 
   #main{ .grid_9(); }
@@ -34,8 +35,14 @@ footer{
 
 }
 
+// Sistemo il layout della pagina errore
 .error404{
-	.sx, .dx{ .grid_6(); margin: 0; }
+    #main{ .grid_12(); }
+    .sx{ .grid_4(); }
+    .dx{ 
+        .grid_6();
+        margin-left: 170px; 
+    }
 }
 
 
