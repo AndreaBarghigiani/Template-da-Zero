@@ -84,8 +84,31 @@
 	 
 	add_action( 'widgets_init', 'zero_widget_area');
 	
+	// Attivo le immagini in evidenza
+	add_theme_support('post-thumbnails');
 	
+	// Le dimensioni per l'immagine slider
+	add_image_size( 'slider-img', 500, 300, true );
 	
+	set_post_thumbnail_size( 500, 300, true );
+	
+	// Carico gli script per lo Slider
+	
+	// Aggiungo la funzione tz_init() all'Action Hook wp_enqueue_script
+	add_action( 'wp_enqueue_scripts', 'tz_init' );
+	
+	// Adesso creo la funzione tz_init()
+	function tz_init(){
+		
+		// Creo una variabile per salvare la posizione del tema
+		$theme_url = get_template_directory_uri();
+		// Registro il mio codice JS per far andare lo slider
+		wp_register_script( 'tz-slider', "$theme_url/js/tz_slider.js", array( 'jquery' ), '0.0.1', false );
+		
+		// Dico a WordPress di includere questi file
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('tz-slider');
+	}
 	
 	
 	

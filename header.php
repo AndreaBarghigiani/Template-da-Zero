@@ -16,6 +16,7 @@
 	<link rel="stylesheet/less" href="<?php bloginfo( 'stylesheet_directory'); ?>/less/style.less">
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/less.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.js"></script>
+	<?php wp_head(); ?>
 </head>
  
 <body <?php body_class(); ?>>

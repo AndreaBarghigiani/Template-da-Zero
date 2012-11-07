@@ -1,5 +1,10 @@
 <?php get_header(); ?>
- 
+ 	
+ 	
+ 	<!-- Inizio Slider -->
+ 		<?php get_template_part( 'slider', 'articoli' ); ?>
+ 	<!-- Fine Slider -->
+ 	
 <!-- Inizio Content -->
     <div id="main" role="main">
  
